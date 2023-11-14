@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+/* 초기화 코드 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+ul, li { list-style: none; }
+a { text-decoration: none; color: inherit; cursor: pointer; }
+img { border: 0; vertical-align: top; }
+header, footer, main, nav, div, section, article, aside { position: relative; }
+
+
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+/* main */
+main {
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-color: rgba(0, 0, 0, .1);
+}
+
+/* header */
+header {
+    width: 200px;
+    height: inherit;
+    background-color: rgba(0, 0, 0, .1);
+    float: left;
+}
+header .logo {
+    width: inherit;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .1);
+}
+/* nav */
+nav {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.main-gnb,
+.sub-gnb {
+    display: block;
+    padding: 5px;
+    width: 180px;
+    transition: all 0.4s;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+.main-menu:hover .main-gnb {
+    background-color: rgba(255, 0, 0, 1);
+    color: #ffffff;
+}
+.main-menu:hover .sub-menu {
+    display: block;
+}
+.sub-menu {
+    display: none;
+    transition: all 0.4s;
+}
+.sub-gnb:hover {
+    background-color: rgba(255, 0, 0, 0.514)
+}
+
+/* contents */
+.contents {
+    width: calc(100% - 200px);
+    height: calc(100vh - 120px);
+    float: left;
+}
+.content {
+    width: 400px;
+    height: inherit;
+    float: left;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+/* contents > banner */
+.banner {
+    width: inherit;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .1);
+}
+.banner .banner-img {
+    width: 60px; height: 60px;
+    background-color: rgba(0, 0, 0, .1);
+    margin-left: 10px;
+    margin-top: 20px;
+    float: left;
+}
+.banner p {
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, .1);
+    position: relative;
+    font-size: 14px;
+}
+.banner p::after {
+    content: '>';
+    font-size: 30px;
+    position: absolute;
+    top: 0; right: -10px;
+}
+
+/* contents > notice */
+.notice,
+.gallery {
+    width: inherit;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .2);
+    margin-top: 20px;
+}
+.notice .notice-title,
+.gallery .gallery-title {
+    background-color: rgba(255, 0, 0, 0.514);
+    color: #ffffff;
+    padding: 10px;
+}
+.notice-cont-box {
+    width: inherit;
+}
+.notice-cont {
+    display: inline-block;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+.notice-text {
+    width: inherit;
+    font-size: 12px;
+    padding: 10px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+/* contents > gallery */
+.gallery-cont-top,
+.gallery-cont-bottom {
+    width: 380px;
+    background-color: rgba(0, 0, 0, .1);
+    display: inline-flex;
+    justify-content: space-between;
+}
+.gallery-cont-top a {
+    display: block;
+    width: 180px; height: 100px;
+    background-color: rgba(0, 0, 0, .1);
+}
+.gallery-cont-bottom {
+    margin-top: 10px;
+}
+.gallery-cont-bottom a {
+    display: block;
+    width: 80px; height: 90px;
+    background-color: rgba(0, 0, 0, .1)
+
+}
+
+/* slider */
+.slider {
+    width: calc(100% - 400px);
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+.slide-box {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 99;
+    display: none;
+}
+.modal-box {
+    width: 500px; height: 500px;
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+.modal-title {
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    padding-bottom: 10px;
+}
+.modal-cont {
+    padding-top: 10px;
+}
+.close {
+    width: 80px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0.514);
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px; left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+}
+.close:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
